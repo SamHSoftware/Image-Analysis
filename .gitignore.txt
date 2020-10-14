@@ -2,3 +2,4 @@
 __pychache__/**
 ipnb_checkpoints/**
 **/ipnb_checkpoints
+*.txt
