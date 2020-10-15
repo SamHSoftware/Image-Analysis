@@ -1,9 +1,5 @@
-**/__pychache__
-__pychache__/**
+**/__pycache__
+__pycache__/**
 
-.ipnb_checkpoints/**
-**/.ipnb_checkpoints
-
-.something
-
-*.txt
+.iypnb_checkpoints/**
+**/.ipynb_checkpoints
