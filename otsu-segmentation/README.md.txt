@@ -25,13 +25,13 @@ file_path = file_selection_dialog()
 ```
 ... a GUI will appear, whithin which, the user should select the image they which to segment. 
 
-![File selection GUI](https://raw.githubusercontent.com/SamHSoftware/Python/main/Image%20Analysis/otsu_segmentation/img/File%20selection.PNG)
+![File selection GUI](https://github.com/SamHSoftware/Image-Analysis/blob/main/otsu-segmentation/img/File%20selection.PNG?raw=true)
 
 The following image is provided as a test input. Within the image, you can see a colony of humans stem cells.  
 
-You can find this image, and others, wihtin [this folder](https://github.com/SamHSoftware/Python/tree/main/Image%20Analysis/otsu_segmentation/img). 
+You can find this image, and others, wihtin [this folder](https://github.com/SamHSoftware/Image-Analysis/tree/main/otsu-segmentation/img). 
 
-![Alt text](https://raw.githubusercontent.com/SamHSoftware/Python/main/Image%20Analysis/otsu_segmentation/img/nuclei.png)
+![Alt text](https://github.com/SamHSoftware/Image-Analysis/blob/main/otsu-segmentation/img/nuclei.png?raw=true)
 
 ## Outputs:
 
@@ -52,14 +52,14 @@ The value of the threshold calculated by the Otsu algorith, assigned to ```thres
 ### Output 2: 
 The script will assign the segmented image to ```segmented_image```. This image will be automatically saved.
 
-![Alt text](https://github.com/SamHSoftware/Python/blob/main/Image%20Analysis/otsu_segmentation/img/nuclei_segmented.png?raw=true)
+![Alt text](https://github.com/SamHSoftware/Image-Analysis/blob/main/otsu-segmentation/img/nuclei_segmented.png?raw=true)
 
 The name of the image will be the original image's name, with the string '\_segmented' appended to the end of the name. The segmented image will share the file extension held by the original image. 
 
 ### Output 3: 
 Providing ```arg 2``` is set to ```True```, then the code will display a figure with the original image, a histogram with the distribution of pixel values and the segmented image. The segmentation threshold is determined by the Otsu threshold, the value of which is represented by ther vertical red line on the histogram.  
 
-![Alt text](https://github.com/SamHSoftware/Python/blob/main/Image%20Analysis/otsu_segmentation/img/montage.png?raw=true)
+![Alt text](https://github.com/SamHSoftware/Image-Analysis/blob/main/otsu-segmentation/img/montage.png?raw=true)
 
 ## Testing the ```otsu_segment()``` function 
 
