@@ -17,7 +17,7 @@ To load in the module functions, use the following code:
 from otsu_segmentation_functions import *
 ```
 ## Input: 
-Upon runnig the following function... 
+Upon running the following function... 
 ```
 # Function input args: None. 
 # Function returns: The file path corresponding to the image selected by the user. 
