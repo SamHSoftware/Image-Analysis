@@ -17,7 +17,7 @@ To load in the module functions, use the following code:
 from otsu_segmentation_functions import *
 ```
 ## Input: 
-Upon runnig the following function... 
+Upon running the following function... 
 ```
 # Function input args: None. 
 # Function returns: The file path corresponding to the image selected by the user. 
@@ -25,7 +25,7 @@ file_path = file_selection_dialog()
 ```
 ... a GUI will appear, whithin which, the user should select the image they which to segment. 
 
-![File selection GUI](https://raw.githubusercontent.com/SamHSoftware/Python/main/Image%20Analysis/otsu_segmentation/img/File%20selection.PNG)
+![File selection GUI](https://github.com/SamHSoftware/Image-Analysis/blob/main/otsu-segmentation/img/File%20selection.PNG?raw=true)
 
 The following image is provided as a test input. Within the image, you can see a colony of humans stem cells.  
 
