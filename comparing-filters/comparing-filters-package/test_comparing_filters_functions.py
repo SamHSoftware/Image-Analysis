@@ -100,19 +100,19 @@ def test_compare_filters():
     test_filt = scipy.ndimage.minimum_filter(original, 3) # We apply the filter to 'smooth' the image.
     threshold, test_seg = cv.threshold(test_filt, 0, 255, cv.THRESH_BINARY + cv.THRESH_OTSU)     
 
-    # Test 4.1: Check for numerical and shape equality between the median filtered unit-test image and the current output of the median filter.  
+    # Test 5.1: Check for numerical and shape equality between the median filtered unit-test image and the current output of the median filter.  
     assert np.array_equal(minimum_filtered, test_filt), "Test 5.1 failed. The median filtered unit-test image and the current output of the median filter have either unequal dimensions or numerical vales."
 
-    # Test 4.2: Check for type equality between the median filtered unit-test image and the current output of the median filter.  
+    # Test 5.2: Check for type equality between the median filtered unit-test image and the current output of the median filter.  
     assert minimum_filtered.dtype == test_filt.dtype, "Test 5.2 failed. The original segmentation output and the test segmentation output have different data types."
 
-    # Test 4.3: Check for numerical and shape equality between the segmentation output and the unit-test image.
+    # Test 5.3: Check for numerical and shape equality between the segmentation output and the unit-test image.
     assert np.array_equal(minimum_filtered_segmented, test_seg), "Test 5.3 failed. The original segmentation output and the test segmentation output have either unequal dimensions or numerical vales."
 
-    # Test 4.4: Check for type equality between the segmentation output generated and the unit-test image.
+    # Test 5.4: Check for type equality between the segmentation output generated and the unit-test image.
     assert minimum_filtered_segmented.dtype == test_seg.dtype, "Test 5.4 failed. The original segmentation output and the test segmentation output have different data types."
 
-    # Test 4.5: Check the Otsu threshold value. 
+    # Test 5.5: Check the Otsu threshold value. 
     assert threshold == 73.0, f"Test 5.5 failed. The newly calculated threshold should have been equal to 73.0 but instead, it was equal to {threshold}"
     
     print('Tests complete, no errors.')
