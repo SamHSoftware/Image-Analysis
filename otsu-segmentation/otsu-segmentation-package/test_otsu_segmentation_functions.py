@@ -1,5 +1,5 @@
 # Import the module containing the functions we need to unit test. 
-import otsu_segmentation_functions
+from otsu_segmentation_functions import otsu_segment
 
 # Import any necessary packages and modules. 
 import cv2 as cv
@@ -14,13 +14,13 @@ def test_otsu_segment():
     
     # Load in the images in question. 
     cwd = os.getcwd()
-    new_path = cwd.replace('otsu_segmentation_package', 'img')
-    nuclei_segmented = cv.imread(f"{new_file_path}/nuclei_segmented.png", 0) 
-    nuclei_path = cwd.replace('otsu_segmentation_package', 'img/nuclei.png')
+    new_path = cwd.replace('otsu-segmentation-package', 'img')
+    nuclei_segmented = cv.imread(f"{new_path}/nuclei_segmented.png", 0) 
+    nuclei_path = cwd.replace('otsu-segmentation-package', 'img/nuclei.png')
     threshold, test_segmentation = otsu_segment(nuclei_path, False)
     
     # Test 1: Check for numerical and shape equality between the segmentation output generated when using 'nuclei.png' to 'nuclei_segmented.png'.
-    assert np.array_equal(nuclei_segmented, test1), "The arrays should have the same dimensions and elements. In this case, these conditions are not met"
+    assert np.array_equal(nuclei_segmented, test_segmentation), "The arrays should have the same dimensions and elements. In this case, these conditions are not met"
     
     # Test 2: Check for type equality between the segmentation output generated when using 'nuclei.png' to 'nuclei_segmented.png'.
     assert nuclei_segmented.dtype == test_segmentation.dtype, "The segmentation output (generated when using 'nuclei.png') should be of the same data-type (uint8) to the provided output, 'nuclei_segmented.png'. In this case, they are unfortunately of different data types."
