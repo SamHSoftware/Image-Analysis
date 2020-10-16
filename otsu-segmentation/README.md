@@ -29,9 +29,9 @@ file_path = file_selection_dialog()
 
 The following image is provided as a test input. Within the image, you can see a colony of humans stem cells.  
 
-You can find this image, and others, wihtin [this folder](https://github.com/SamHSoftware/Python/tree/main/Image%20Analysis/otsu_segmentation/img). 
+You can find this image, and others, wihtin [this folder](https://github.com/SamHSoftware/Image-Analysis/tree/main/otsu-segmentation/img). 
 
-![Alt text](https://raw.githubusercontent.com/SamHSoftware/Python/main/Image%20Analysis/otsu_segmentation/img/nuclei.png)
+![Alt text](https://github.com/SamHSoftware/Image-Analysis/blob/main/otsu-segmentation/img/nuclei.png?raw=true)
 
 ## Outputs:
 
