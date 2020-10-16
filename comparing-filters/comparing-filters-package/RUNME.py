@@ -9,5 +9,6 @@ file_path = file_selection_dialog()
 # Function input arg 2: 'True' to display the figure which compares the filtered/original images to their segmentation outputs.
 # Function input arg 3: 'True' to save the figure which compares the filtered/original images to their segmentation outputs.
 # Function input arg 4: The desired colormap to display the images. Must be a string. 
+# Function input arg 5: Kernel size for filtering. 
 # Function output 1: The figure. 
-figure = compare_filters(file_path, plot_images, save_plot, colormap)
+figure = compare_filters(file_path, plot_images, save_plot, colormap, kernel_size)

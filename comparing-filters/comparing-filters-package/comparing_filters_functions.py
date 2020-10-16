@@ -20,10 +20,8 @@ def file_selection_dialog():
         raise TypeError("Your image has more than one channel. Please select an image with only one channel.")
     return file_path
 
-
 # A function to compare the effects of different image filters.
-colormap = 'gray'
-def compare_filters(file_path, plot_images, save_plot, colormap):
+def compare_filters(file_path, plot_images, save_plot, colormap, kernel_size):
 
     # Load in the image. 
     image = cv.imread(file_path, 0) 
@@ -36,21 +34,21 @@ def compare_filters(file_path, plot_images, save_plot, colormap):
 
     # Segment the original image. 
     _, image_segmented = cv.threshold(image, 0, 255, cv.THRESH_BINARY + cv.THRESH_OTSU)
-
+    
     # Filter 1: Median filter image. 
-    median_filter_image = scipy.ndimage.median_filter(image, 3) # We apply the filter to 'smooth' the image.
-    _, median_filter_segmented = cv.threshold(median_filter_image, 0, 255, cv.THRESH_BINARY + cv.THRESH_OTSU)
-
+    median_filter_image = scipy.ndimage.median_filter(image, kernel_size) # We apply the filter to 'smooth' the image.
+    _, median_filter_segmented = cv.threshold(median_filter_image, 0, 255, cv.THRESH_BINARY + cv.THRESH_OTSU)     
+    
     # Filter 2: Gaussian filter image. 
-    gaussian_filter_image = scipy.ndimage.gaussian_filter(image, 3) # We apply the filter to 'smooth' the image.
+    gaussian_filter_image = scipy.ndimage.gaussian_filter(image, kernel_size) # We apply the filter to 'smooth' the image.
     _, gaussian_filter_segmented = cv.threshold(gaussian_filter_image, 0, 255, cv.THRESH_BINARY + cv.THRESH_OTSU)
 
     # Filter 3: Maximum filter image. 
-    maximum_filter_image = scipy.ndimage.maximum_filter(image, 3) # We apply the filter to 'smooth' the image.
+    maximum_filter_image = scipy.ndimage.maximum_filter(image, kernel_size) # We apply the filter to 'smooth' the image.
     _, maximum_filter_segmented = cv.threshold(maximum_filter_image, 0, 255, cv.THRESH_BINARY + cv.THRESH_OTSU)
 
     # Filter 4: Minimum filter image. 
-    minimum_filter_image = scipy.ndimage.minimum_filter(image, 3) # We apply the filter to 'smooth' the image.
+    minimum_filter_image = scipy.ndimage.minimum_filter(image, kernel_size) # We apply the filter to 'smooth' the image.
     _, minimum_filter_segmented = cv.threshold(minimum_filter_image, 0, 255, cv.THRESH_BINARY + cv.THRESH_OTSU)
 
     # Plot the filtered images alongside their segmented counterparts. 
