@@ -73,11 +73,17 @@ import numpy as np
 import scipy.ndimage
 ```
 
-(3) Then, run the following function (and it's corresponding code) within the python console such that it may be called and used.
+(3) Then, run the following function within the python console such that it may be called and used later on.
 ```
 # Test the function 'comparing_filters()' against the provided output. 
 # Function input args: None. 
 # Function returns: When no errors are detected, a statement confirming this is printed. When errors are detcted, assertion errors are raised. 
+def test_compare_filters():
+    # ... All the code goes here in the unit testing module...
+```
+Then, call the function: 
+```
+# Run the function for unit testing
 test_compare_filters()
 ```
 If there are errors, then the code will print assertion errors explaining what went wrong.  

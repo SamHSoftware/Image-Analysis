@@ -116,3 +116,6 @@ def test_compare_filters():
     assert threshold == 73.0, f"Test 5.5 failed. The newly calculated threshold should have been equal to 73.0 but instead, it was equal to {threshold}"
     
     print('Tests complete, no errors.')
+
+# Run the function for unit testing
+test_compare_filters()
