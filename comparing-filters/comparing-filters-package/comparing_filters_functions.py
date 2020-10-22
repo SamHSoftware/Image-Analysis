@@ -97,15 +97,15 @@ def compare_filters(file_path, plot_images, save_plot, colormap, kernel_size):
     plt.subplots_adjust(wspace=0)
     fig = plt.gcf()
     
-    # Display the plot if the user desires it. 
-    if (plot_images != True):
-        plt.close()
-    
     # Save the plot if the user desires it.
     if save_plot:
         _, tail = ntpath.split(file_path)
         filename, file_extension = os.path.splitext(tail)
         new_file_path = file_path.replace(tail, f"{filename}_comparing_filters.png")
         plt.savefig(new_file_path, dpi=200, bbox_inches='tight')
+    
+    # Display the plot if the user desires it. 
+    if (plot_images == False):
+        plt.close()
     
     return(fig)
