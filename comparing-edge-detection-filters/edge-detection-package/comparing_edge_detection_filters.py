@@ -27,8 +27,10 @@ def file_selection_dialog():
 # Function input arg 2: plot_images --> Set to True or False. If True, a montage of filtered images will be displayed in the console. 
 # Function input arg 3: save_plot --> Set to True or False. If True, a montage of filtered images will be saved to the same directory as the source image.
 # Function input arg 4: kernel_size --> Set to positive integer representing size of gaussian kernel when smoothing image. 
+# Function input arg 5: canny_thresh_1 --> Set to positive integer representing first threshold for the canny filter hysteresis procedure.
+# Function input arg 6: canny_thresh_2 --> Set to positive integer representing second threshold for the canny filter hysteresis procedure.
 # Function output 1: The montage of filtered images. 
-def compare_edge_detection(file_path, plot_images, save_plot, kernel_size):
+def compare_edge_detection(file_path, plot_images, save_plot, kernel_size, canny_thresh_1, canny_thresh_2):
 
     # Load in the image. 
     image = cv.imread(file_path, 0) 
@@ -68,7 +70,7 @@ def compare_edge_detection(file_path, plot_images, save_plot, kernel_size):
     sobel_x_y = clahe.apply(sobel_x_y)
     
     # Filter 6: Canny Edge detection.
-    canny_edges = cv.Canny(gaussian_filter_image, 40, 45)
+    canny_edges = cv.Canny(gaussian_filter_image, canny_thresh_1, canny_thresh_2)
     
     # Plot the filtered images alongside their segmented counterparts. 
     fig, axs = plt.subplots(3,2,figsize=(8,15))
