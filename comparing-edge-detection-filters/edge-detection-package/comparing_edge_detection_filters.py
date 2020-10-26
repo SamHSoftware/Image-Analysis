@@ -54,12 +54,12 @@ def compare_edge_detection(file_path, plot_images, save_plot, kernel_size):
     laplacian_edges = clahe.apply(laplacian_edges)
     
     # Filter 2: Sobel-x edge detection 
-    sobel_x = cv.Sobel(gaussian_filter_image, cv.CV_16S, 1, 0, ksize=3)
+    sobel_x = cv.Sobel(gaussian_filter_image, cv.CV_16S, 1, 0, kernel_size)
     sobel_x_abs = cv.convertScaleAbs(sobel_x)  
     sobel_x_abs2 = clahe.apply(sobel_x_abs)
     
     # Filter 3: Sobel-y edge detection 
-    sobel_y = cv.Sobel(gaussian_filter_image, cv.CV_16S, 0, 1, ksize=3)
+    sobel_y = cv.Sobel(gaussian_filter_image, cv.CV_16S, 0, 1, kernel_size)
     sobel_y_abs = cv.convertScaleAbs(sobel_y)
     sobel_y_abs2 = clahe.apply(sobel_y_abs)
     
