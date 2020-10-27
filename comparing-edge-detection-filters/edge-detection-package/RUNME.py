@@ -1,4 +1,6 @@
 # Import the necessary packages.
+# Function input args: None. 
+# Function returns: The file path corresponding to the image selected by the user. 
 from comparing_edge_detection_filters import *
 
 # A function to allow the user to select the image they wish to analyse. 
