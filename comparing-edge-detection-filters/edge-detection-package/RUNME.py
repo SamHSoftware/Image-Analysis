@@ -13,5 +13,7 @@ file_path = file_selection_dialog()
 # Function input arg 2: plot_images --> Set to True or False. If True, a montage of filtered images will be displayed in the console. 
 # Function input arg 3: save_plot --> Set to True or False. If True, a montage of filtered images will be saved to the same directory as the source image.
 # Function input arg 4: kernel_size --> Set to positive integer representing size of gaussian kernel when smoothing image. 
+# Function input arg 5: canny_thresh_1 --> Set to positive integer representing first threshold for the canny filter hysteresis procedure.
+# Function input arg 6: canny_thresh_2 --> Set to positive integer representing second threshold for the canny filter hysteresis procedure.
 # Function output 1: The montage of filtered images. 
-montage = compare_edge_detection(file_path, plot_images, save_plot, kernel_size)
+montage = compare_edge_detection(file_path, plot_images, save_plot, kernel_size, canny_thresh_1, canny_thresh_2)
