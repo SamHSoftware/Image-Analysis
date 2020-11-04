@@ -16,11 +16,9 @@ E-mail: samhuguet1@gmail.com
 
 (1) First, open the RUNME.py file. 
 
-(2) Within the ```RUNME.py``` file, first load in the module functions with the following code: 
+(2) Within the ```RUNME.py``` file, first load in the necessary module functions with the following code: 
 ```
 # Import the necessary packages.
-# Function input args: None. 
-# Function returns: The file path corresponding to the image selected by the user. 
 from comparing_edge_detection_filters import *
 ```
 
